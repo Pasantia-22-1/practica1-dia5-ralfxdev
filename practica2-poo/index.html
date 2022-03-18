@@ -8,46 +8,78 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body class="m-0 row justify-content-center aling-items-center">
-    <div class="col-auto p-5 text-center bg-light shadow">
-        <h1>App Shop.js</h1>
+<body class="m-0 p-5 row justify-content-center aling-items-center">
+
+    <div class="col-3 p-5 m-5 text-center bg-light shadow">
+        <h1>App Shop.js 🛒</h1>
 
         <h5>Raton</h5>
-        <form class="p-3" id="form">
+        <form class="p-3" id="formRaton">
             <div class="mb-3">
-                <input type="text" class="form-control mb-3" id="tipoEntrada" placeholder="Ingrese el tipo de entrada">
-                <input type="text" class="form-control mb-3" id="tipoEntrada" placeholder="Ingrese la marca">
+                <input type="text" class="form-control mb-3" id="tipoEntradaRaton" placeholder="Ingrese el tipo de entrada">
+                <input type="text" class="form-control mb-3" id="marcaRaton" placeholder="Ingrese la marca">
             </div>
         </form>
         <hr>
 
         <h5>Teclado</h5>
-        <form class="p-3" id="form">
+        <form class="p-3" id="formTeclado">
             <div class="mb-3">
-                <input type="text" class="form-control mb-3" id="tipoEntrada" placeholder="Ingrese el tipo de entrada">
-                <input type="text" class="form-control mb-3" id="tipoEntrada" placeholder="Ingrese la marca">
+                <input type="text" class="form-control mb-3" id="tipoEntradaTeclado" placeholder="Ingrese el tipo de entrada">
+                <input type="text" class="form-control mb-3" id="marcaTeclado" placeholder="Ingrese la marca">
             </div>
         </form>
         <hr>
 
         <h5>Monitor</h5>
-        <form class="p-3" id="form">
+        <form class="p-3" id="formMonitor">
             <div class="mb-3">
-                <input type="text" class="form-control mb-3" id="tipoEntrada" placeholder="Ingrese la marca">
-                <input type="text" class="form-control mb-3" id="tipoEntrada" placeholder="Ingrese el tamaño">
+                <input type="text" class="form-control mb-3" id="marcaMonitor" placeholder="Ingrese la marca">
+                <input type="text" class="form-control mb-3" id="tamañoMonitor" placeholder="Ingrese el tamaño">
             </div>
         </form>
         <hr>
 
         <h5>Computadora</h5>
-        <form class="p-3" id="form">
+        <form class="p-3" id="formComputadora">
             <div class="mb-3">
-                <input type="text" class="form-control mb-3" id="tipoEntrada" placeholder="Ingrese la marca">
+                <input type="text" class="form-control mb-3" id="marcaComputadora" placeholder="Ingrese la marca">
             </div>
         </form>
         <button class="btn btn-dark mb-3" onclick="aggComputadora()">Agregar Computadora</button>
 
     </div>
+
+    <div class="col-6 p-5 m-5 text-center bg-light shadow">
+        <h3>Mis Ordenes</h3>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Computadora</th>
+                <th scope="col">Raton</th>
+                <th scope="col">Teclado</th>
+                <th scope="col">Monitor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dell</td>
+                <td>Logitech - USB</td>
+                <td>Redragon - USB</td>
+                <td>Acer - 28"</td>
+              </tr>
+              <tr>
+                <td id="newComputadora"></td>
+                <td id="newRaton"></td>
+                <td id="newTeclado"></td>
+                <td id="newMonitor"></td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
     <!--scripts-->
     <script src="./js/ClaseOrden.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

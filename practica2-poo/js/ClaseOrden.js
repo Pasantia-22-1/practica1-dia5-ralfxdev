@@ -28,7 +28,7 @@ class Raton extends DispositivoEntrada{
         return this._idRaton;
     }
     toString(){
-        return `Raton: [idRaton: ${this._idRaton}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca}]`
+        return `${this._marca} - ${this._tipoEntrada}`
     }
 }
 
@@ -50,7 +50,7 @@ class Teclado extends DispositivoEntrada{
         return this._idTeclado;
     }
     toString(){
-        return `Teclado: [idTeclado: ${this._idTeclado}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca}]`
+        return `${this._marca} - ${this._tipoEntrada}`
     }
 }
 
@@ -84,7 +84,7 @@ class Monitor{
         return this._idMonitor;
     }
     toString(){
-        return `Monitor: [idMonitor: ${this._idMonitor}, marca: ${this._marca}, tamaño: ${this._tamaño}]`
+        return `${this._marca} - ${this._tamaño}"`
     }
 }
 
@@ -108,7 +108,7 @@ class Computadora{
         return this._idComputadora;
     }
     toString(){
-        return `Computadora: [idComputadora: ${this._idComputadora}, nombre: ${this._nombre},\n${this._monitor},\n${this._teclado},\n${this._raton}]`
+        return `${this._nombre}`
     }
 
 
@@ -145,3 +145,48 @@ let orden1 = new Orden(`${computadora1}`);
 console.log(orden1.toString());
 let orden2 = new Orden(`${computadora2}`);
 console.log(orden2.toString());
+
+
+function aggComputadora(){
+
+    //Computadora
+    document.getElementById('formComputadora')
+    
+    let marcaComputadora = formComputadora['marcaComputadora'].value;
+
+    const newComputadora = new Computadora(marcaComputadora);
+    document.getElementById('newComputadora').innerHTML = `${newComputadora}`
+
+    console.log(new Computadora());
+
+    //Raton
+
+    document.getElementById('formRaton')
+
+    let tipoEntradaRaton = formRaton['tipoEntradaRaton'].value;
+    let marcaRaton = formRaton['marcaRaton'].value;
+ 
+    const newRaton = new Raton(tipoEntradaRaton, marcaRaton);
+    document.getElementById('newRaton').innerHTML = `${newRaton}`
+
+    //Teclado
+
+    document.getElementById('formTeclado')
+
+    let tipoEntradaTeclado = formTeclado['tipoEntradaTeclado'].value;
+    let marcaTeclado= formTeclado['marcaTeclado'].value;
+ 
+    const newTeclado = new Teclado(tipoEntradaTeclado, marcaTeclado);
+    document.getElementById('newTeclado').innerHTML = `${newTeclado}`
+
+    //Monitor
+
+    document.getElementById('formMonitor')
+
+    let marcaMonitor = formMonitor['marcaMonitor'].value;
+    let tamañoMonitor= formMonitor['tamañoMonitor'].value;
+ 
+    const newMonitor = new Monitor(marcaMonitor, tamañoMonitor);
+    document.getElementById('newMonitor').innerHTML = `${newMonitor}`
+
+}
